@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Autos Inviesibles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="/css/media-querie.css"> -->
+    <link rel="stylesheet" href="css/invie.css"/>
+  </head>
+  <body>
+    <div class="gtr">
+      <figure class="logotipo">   <!-- logotipo -->
+        <img src="images/invie.png" srcset="images/invie.png 1x images/invie2x.png 2x" alt="Invie Logotipo">
+      </figure>
+      <span class="burguer-button icon-menu" id="burguer-button"></span>
+      <div class="menu" id="menu">
+        <nav >
+          <ul>
+            <li><a href="index.html" class="home">Home</a></li> <!-- home -->
+            <li><a href="#autos">Autos</a></li>
+            <li><a href="precios.html" class="precios">Precios</a></li> <!-- precios -->
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section id="portada" class="portada contenedor background"> <!-- portada -->
+      <header id="header" class="header contenedor"> <!-- header -->
+      <!-- menu -->
+    </header>
+      <h1 class="titulo">Autos <span>invie</span>sibles</h1><!-- titulo -->
+      <h3 class="resumen">Conduce el futuro</h3><!-- resumen -->
+      <button class="button">Conoce más</button> <!-- boton -->
+    </section>
+    <section id="autos" class="autos contenedor"> <!-- autos -->
+    <h2>Nuestros autos</h2> <!-- titulo -->
+      <article class="autos wrx"> <!-- auto 1 -->
+        <div class="video-responsive-contenedor">
+          <iframe class="video-responsive-src"width="560" height="315" src="https://www.youtube.com/embed/f9ySyd8SvRw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <img data-src="images/16_wrx_sti-vehicle.png" alt="Subaru" width="360" class="subaru">
+        <h3 class="title-a">Invie Deportivo</h3>
+        <ol>
+          <li>Incluye rines de lujo marca lexani <strong>Invie</strong>sibles</li>
+          <li>Motor V6 de 2.5L con 350HP</li>
+          <li>BodyKit RocketBunny GReddy <strong>Invie</strong>sible</li>
+        </ol>
+      </article>
+      <article class="autos gt"> <!-- auto 2 -->
+        <div class="video-responsive-contenedor">
+          <iframe  class="video-responsive-src"width="560" height="315" src="https://www.youtube.com/embed/CKV_IKgbHA0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <img data-src="images/ford_gt-min.png" alt="Ford" width="400" class="ford">
+        <h3 class="title-b">Invie Super</h3>
+        <ol>
+          <li>Incluye sistema aerodinamico <strong>Invie</strong>sible</li>
+          <li>Motor V8 de 12L con turbokit</li>
+          <li>Diseño elegante <strong>Invie</strong>sible</li>
+        </ol>
+      </article>
+    </section>
+    <footer class="footer">
+          <div class="contenedor">
+            <div class="contacto">
+              <a href="index.html"><img data-src="images/invie-white.png" alt="Logo 2" class="logo2"></a>
+              <a href="https://www.skype.com/es/" target="_blank"><strong>Telefono </strong><span>+584124722268</span></a>
+              <a href="mailto:contacto@invie.com" target="_blank"><strong>E-mail</strong><span>contacto@invie.com</span></a>
+            </div>
+          <form class="formulario">
+          <div class="col1">
+            <label for="nombre">Nombre</label>
+            <input type="text" required="" id="nombre" name="nombre"/>
+            <label for="email">E-mail</label>
+            <input type="email" required="" id="email" name="email"/>
+            <div class="sexo">
+                <label for="mujer">
+                <input type="radio" checked id="mujer" name="sexo" value="mujer"/> mujer
+                </label>
+                <label for="hombre">
+                <input type="radio" id="hombre" name="sexo" value="hombre"/> hombre
+                </label>
+            </div>
+            <div class="intereses">
+                <label for="cotizacion">
+                  <input type="checkbox" checked name="intereses" value="cotizacion"> Cotización
+                </label>
+                <label for="reclamos">
+                  <input type="checkbox" name="reclamos" value="reclamos"> Reclamos
+                </label>
+                <label for="otros">
+                  <input type="checkbox" name="otros" value="otros"> Otros
+                  <label for="comentarios">
+                    <input type="checkbox" name="comentarios" value="comentarios"> Comentarios
+                  </label>
+                </label>
+              </div>
+            </div>
+    <div class"col2">
+          <label for="comentarios">
+            Comentario
+          </label>
+          <textarea name="comentarios" id="comentarios"rows="6" cols="23"></textarea>
+          <input type="submit" name="enviar" value="Enviar" class="button"/>
+        </form>
+      </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script><script>WebFont.load({google:{families:['Montserrat','Nunito']}});</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script>var consulta=window.matchMedia('(max-width: 500px)');consulta.addListener(mediaQuery);var $burguerButton=document.getElementById('burguer-button');var $menu=document.getElementById('menu');function toggleMenu(){$menu.classList.toggle('active')};function showMenu(){$menu.classList.add('active')};function hideMenu(){$menu.classList.remove('active')};function mediaQuery(){if(consulta.matches){console.log('se cumplió la condicion');$burguerButton.addEventListener('touchstart',toggleMenu)}else{$burguerButton.removeEventListener('touchstart',toggleMenu);console.log('no se cumplió la condicion')}}
+    mediaQuery();var bLazy=new Blazy({selector:'img'});var $body=document.body;var gestos=new Hammer($body);gestos.on('swipeleft',hideMenu);gestos.on('swiperight',showMenu);</script>
+  </body>
+</html>
